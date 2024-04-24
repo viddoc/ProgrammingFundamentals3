@@ -1,0 +1,20 @@
+Tommy Hudson
+GenealogyTree Lab
+COSC-2436
+
+Runtime Analysis for the following functions:
+
+Queue::enqueue              = O(1)
+Queue::dequeue              = O(1)
+Stack::push                 = O(1)
+Stack::pop                  = O(1)
+Main::levelOrderTraversal   = O(N)
+Main::isDescendant          = O(N)
+
+Each of the adding and removing operations for the Queue and Stack are O(1) because of the nature of the data structures I built.
+Stack is easy because you add to the "top" and remove from the "top" but Queue was a little more tricky.
+I had to add a Node class to my Queue to be able to get it down to O(1) because in my previous implementation I was getting O(N)
+due to the nature of the remove function in ArrayList.
+
+levelOrderTraversal is O(N) because it visits each node in the tree once with constant time operations done at each node.
+isDescendant is also O(N) as well because it may require every node to be visited once to verify the nature of the relationship between descendant and ancestor.
